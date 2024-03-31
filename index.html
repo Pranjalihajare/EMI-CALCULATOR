@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    
+</head>
+<body class="container-fluid bg-dark text-white">
+    <h1 class="text-center">Personal Loan EMI Calculator</h1>
+    <div class="bg-light text-dark p-4 m-4">
+        <div class="row ">
+            <div class="col">
+              Amount you need &#8377; <input type="text" id="txtAmount">
+            </div>
+            <div class="col">
+                for <input type="text" size="4" id="txtYears"> Years
+            </div>
+            <div class="col">
+              Interest rate <input type="text" size="4" id="txtRate"> %
+            </div>
+        </div>
+
+        <div class="row mt-4 ">
+            <div class="col">
+             &#8377; 1000000 <input id="amountSlider" onchange="AmountChange()" type="range" min="1000000" value="1000000" max="3000000"> &#8377; 3000000
+            </div>
+            <div class="col">
+                1 <input type="range" min="1" max="5" id="yearSlider" onchange="YearChange()" value="1"> 5
+            </div>
+            <div class="col">
+              10.25% <input type="range" id="rateSlider" onchange="RateChange()" min="10.25"  max="18.25" value="10.25" step="0.01"> 18.25%
+            </div>
+        </div>
+        <div class="mt-4 row">
+            <div class="col text-end">
+            <button onclick="CalculateClick()" class="btn btn-primary">Calculate</button>
+        </div>
+        </div>
+        <div class="mt-4">
+             <span class="h3" id="lblResult"></span>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<
